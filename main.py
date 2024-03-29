@@ -1,4 +1,5 @@
 from binance_client import Bot
+import time
 
 
 API_KEY, API_SECRET = None, None  # binance API 키값
