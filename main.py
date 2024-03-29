@@ -11,7 +11,6 @@ if __name__ == "__main__":
         API_KEY = lines[0].strip()
         API_SECRET = lines[1].strip()
 
-
     bot = Bot(API_KEY, API_SECRET, TICKER, SYMBOL)
 
     bot.open_1x_short_position()
