@@ -14,4 +14,11 @@ if __name__ == "__main__":
 
     bot = Bot(API_KEY, API_SECRET, TICKER, SYMBOL)
 
-    bot.open_1x_short_position()
+    initial_position_state = bot.check_position_info()
+    initial_order_state = bot.check_open_orders()
+    while True:
+        if initial_order_state and initial_order_state:
+            if not bot.check_position_info():
+                if not bot.check_open_orders():
+                    bot.open_1x_short_position()
+        time.sleep(5)
